@@ -1,0 +1,33 @@
+EXERCICE 1
+
+1.1 - @override signifie que l'implémentation de la méthode hérité et défini dans la classe parente est modifiée.
+			En effet, la méthode toString() est définie dans la classe parente Object.
+			La nouvelle implémentation permet d'afficher l'ensemble des valeurs de configuration (valeurs des paramètres CLI).
+			Cela n'est pas obligatoire car la méthode toString() n'est pas abstraite.
+			
+1.2 - Par défaut, le programmeur ne doit jamais déclarer des attributs de classe en public afin d'éviter que l'utilisateur
+			modifie l'état de l'objet et ainsi préserver la cohérences des données qui le compose.
+			Par exemple, il est possible de modifier la valeur de l'attribut alpha avec instanceConfiguration.alpha = 2 qui ne
+			respecte pas la contrainte 0 < alpha < 1.
+			Si le programmeur souhaite rendre acessible en lecture/écriture les attributs d'une classe, il doit uniquement le réaliser 
+			au-travers d'accesseurs et mutateurs puis sélectionner le droit d'accès private pour les attributs.
+			
+1.3 - Oui cela est possible et il s'agit de la bonne méthode afin de contrôler si deux objets ont une valeur logique identique (le résultat est le bon).
+
+EXERCICE 2
+
+2.1 - Voir code dans le fichier TestConfiguration.java
+
+2.2 - Le résultat sera alpha=0.85, epsilon=0.001, indice=100, mode=CREUSE
+
+2.3 - Le programme n'est pas robuste car il a laissé une exception se propager.
+			En d'autre terme, un problème est survenu et il n'a pas été traité par le programme.
+
+2.4 - Non, nous ne pouvons pas le déduire explicitement par la lecture du listing 3.
+			La signature des méthodes Integer.parseInt() et Double.parseDouble() nous indiquent
+			qu'elles peuvent propager une exception de type NumberFormatException mais le compilateur
+			ne l'indique pas car elles sont non vérifiées (sous-type de RunTimeException).
+			
+2.5 - Voir code fichier PageRankClassique.java
+
+2.6 - Il manque la vérifiaction de la valeur d'alpha selon la borne 0 < alpha < 1.
