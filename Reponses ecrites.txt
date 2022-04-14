@@ -31,3 +31,7 @@ EXERCICE 2
 2.5 - Voir code fichier PageRankClassique.java
 
 2.6 - Il manque la vérifiaction de la valeur d'alpha selon la borne 0 < alpha < 1.
+
+EXERCICE 3
+
+3.3 Nous utilisons la structure HashMap de l'interface Map. Cette structure est tout à fait adapatée car elle n'autorise pas de clés identiques mais autorise des valeurs identiques. Par exemple, pour l'option "Matrice" nous avons besoin de modifier la même option mais avec deux accès différents.
