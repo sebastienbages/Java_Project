@@ -1,7 +1,8 @@
-package exo_3;
+package exo_5;
 
 import cli_framework.CLIOption;
 import cli_framework.Command;
+import exo_3.Mode;
 
 public class SetModeCommand implements Command<Mode> {
 
@@ -13,16 +14,16 @@ public class SetModeCommand implements Command<Mode> {
 	
 	@Override
 	public void execute(String arg) {
-		switch (arg) {
-		case "-C":
+		String vrai = this.option.getAcces().toLowerCase();
+		String faux = this.option.getAcces().toUpperCase();
+		
+		if (arg.equals(vrai)) {
 			option.setValeur(Mode.CREUSE);
-			break;
-		case "-P":
+		}
+		
+		if (arg.equals(faux)) {
 			option.setValeur(Mode.PLEINE);
-			break;
-		default:
-			break;
-		}		
+		}
 	}
 
 	@Override

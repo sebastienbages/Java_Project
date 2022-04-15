@@ -1,6 +1,6 @@
 package cli_framework;
 
-public abstract class CLIOption<T> {
+public class CLIOption<T> {
 	protected String acces;
 	protected String nom;
 	protected String description;

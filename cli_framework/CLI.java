@@ -3,8 +3,8 @@ package cli_framework;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class CLI {
-	protected Map<String, Command<?>> options;
+public class CLI {
+	private Map<String, Command<?>> options;
 	
 	public CLI() {
 		this.options = new HashMap<String, Command<?>>();
@@ -15,5 +15,30 @@ public abstract class CLI {
 		this.options.put(acces, cmd);
 	}
 	
-	public abstract void execute(String ...args);
+	public void execute(String ...args) {
+		for (int i = 0; i < args.length; i++) {
+			if (this.options.containsKey(args[i])) {
+				Command<?> cmd = this.options.get(args[i]);
+				CLIOption<?> opt = cmd.getOption();
+				
+				if (opt.possedeUneValeur()) {
+					cmd.execute(args[++i]);
+				}
+				else {
+					cmd.execute(args[i]);
+				}
+			}
+		}
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder str = new StringBuilder();
+		str.append("DONNEES DU CLI : \n");
+		options.forEach((key, value) -> {
+			CLIOption<?> opt = value.getOption();
+			str.append(opt.toString() + "\n");
+		});
+		return str.toString();
+	}
 }

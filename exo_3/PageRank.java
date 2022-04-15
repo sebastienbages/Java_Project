@@ -1,5 +1,7 @@
 package exo_3;
 
+import exo_5.SetModeCommand;
+
 public class PageRank {
 	public static void main(String... args) {
 		PageRankCLI pageRankCli = new PageRankCLI();

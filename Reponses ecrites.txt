@@ -35,3 +35,7 @@ EXERCICE 2
 EXERCICE 3
 
 3.3 Nous utilisons la structure HashMap de l'interface Map. Cette structure est tout à fait adapatée car elle n'autorise pas de clés identiques mais autorise des valeurs identiques. Par exemple, pour l'option "Matrice" nous avons besoin de modifier la même option mais avec deux accès différents.
+
+EXERCICE 5
+
+5.2 Pour traiter les actions associées aux options, il est nécessaire de récupérer le type de l'attribut pour lui attribuer une commande correcte. J'ai implémenté cela dans mon code.
