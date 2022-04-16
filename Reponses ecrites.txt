@@ -42,4 +42,11 @@ EXERCICE 5
 
 EXERCICE 6
 
-6.3 De la même façon que nous avons réussi à créer un programme qui engendre un fichier XML, il suffirait de lire un fichier XML conforme à cli.dtd et d'extraire les attributs des éléments <arguments> pour construire nos options qui composent notre CLI.
+6.3 De la même façon que nous avons réussi à créer un programme qui engendre un fichier XML, il suffirait de lire un fichier XML conforme à cli.dtd et d'extraire les attributs des éléments <arguments> pour construire nos options qui composent notre CLI.7
+
+EXERCICE 4 
+
+4.1 Je créé une vue organisé en BorderLAyout dans lequel j'insère deux Jpanel principaux. Le premier contiendra les deux boutons du mode, ils seront centrés et le JPanel sera positionné dans la zone nord. Le second contiendra trois autres JPanel qui contiendront respectivement un TextField, un Label et un bouton. Les trois Panel seront répartis entre le nord, le centre et le sud. Le panel qui contient les arguments est positionné au centre. Le dernier champ sera un TextField et sera positioné dans la zone du sud.
+Les Panels contenant les arguement seront organisé en GridLayout afin que chaque élément possède une taille identique répartie sdans la fenêtre.
+
+4.2 Un listener identique est ajouté sur les deux boutons Creuse et Pleine. Depuis l'objet ActionEvent que nous récupérons dans notre méthode actionPerformed, j'implémente deux conditions pour déterminer quel bouton a été utilisé grâce au texte du bouton. Ensuite, je récupère la valeur actuelle du TextField qui contient le résulat de la ligne de commande et j'y ajoute le texte correspondant au mode séletionné.
