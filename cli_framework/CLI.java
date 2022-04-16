@@ -1,5 +1,7 @@
 package cli_framework;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,6 +31,13 @@ public class CLI {
 				}
 			}
 		}
+	}
+	
+	public ArrayList<CLIOption<?>> getOptions() {
+		Collection<Command<?>> cmds = this.options.values();
+		ArrayList<CLIOption<?>> options = new ArrayList<CLIOption<?>>();
+		cmds.forEach((cmd) -> options.add(cmd.getOption()));
+		return options;
 	}
 	
 	@Override

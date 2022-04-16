@@ -21,6 +21,14 @@ public class CLIOption<T> {
 		this.acces = acces;
 	}
 	
+	public String getDescription( ) {
+		return this.description;
+	}
+	
+	public T getValeur() {
+		return this.valeur;
+	}
+	
 	public void setValeur(T valeur) {
 		this.valeur = valeur;
 	}

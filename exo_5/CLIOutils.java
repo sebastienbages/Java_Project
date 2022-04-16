@@ -9,7 +9,7 @@ import exo_3.ParseDoubleCommand;
 import exo_3.ParseIntCommand;
 
 public class CLIOutils {
-	public CLI fromClass(Configuration configuration) {
+	public static CLI fromClass(Configuration configuration) {
 		Class<? extends Configuration> classConf = configuration.getClass();
 		Field[] fields = classConf.getFields();
 		

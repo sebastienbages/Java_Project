@@ -39,3 +39,7 @@ EXERCICE 3
 EXERCICE 5
 
 5.2 Pour traiter les actions associées aux options, il est nécessaire de récupérer le type de l'attribut pour lui attribuer une commande correcte. J'ai implémenté cela dans mon code.
+
+EXERCICE 6
+
+6.3 De la même façon que nous avons réussi à créer un programme qui engendre un fichier XML, il suffirait de lire un fichier XML conforme à cli.dtd et d'extraire les attributs des éléments <arguments> pour construire nos options qui composent notre CLI.
